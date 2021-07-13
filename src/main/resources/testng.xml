@@ -21,4 +21,9 @@
             <class name="tests.mystore.CartPageTest"/>
         </classes>
     </test>
+    <test name="AddItemToWishListTest">
+        <classes>
+            <class name="tests.mystore.AddItemToWishListTest"/>
+        </classes>
+    </test>
 </suite>

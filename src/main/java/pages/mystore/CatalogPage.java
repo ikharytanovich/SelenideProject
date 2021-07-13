@@ -12,22 +12,11 @@ public class CatalogPage extends BasePage {
     private static final String ADD_TO_CART_ITEM = "//a[@title='Add to cart']";
     private static final String CONTINUE_SHOPPING_BUTTON = "//span[@title='Continue shopping']";
     private static final String PROCEED_PAYMENT_BUTTON = "//div[@class='clearfix']//a";
-    private static final String COLORS = "//ul[@id='color_to_pick_list']/li";
-    private static final String ADD_TO_CART = "//span[text()='Add to cart']";
 
-    public void openItemPage(String itemName) {
+
+    public void openItemDetailed(String itemName) {
         $x(format(ITEM, itemName)).shouldBe(Condition.visible).click();
         log().info("OPENED PAGE OF: " + itemName);
-    }
-
-    public void changeItemColorToLast() {
-        $$x(COLORS).filter(Condition.visible).last().click();
-        log().info("COLOR CHANGED TO LAST");
-    }
-
-    public void addToCart() {
-        $x(ADD_TO_CART).shouldBe(Condition.visible).click();
-        log().info("ADDED TO CART");
     }
 
     public void proceedPayment() {
@@ -40,7 +29,7 @@ public class CatalogPage extends BasePage {
         log().info("SHOPPING CONTINUED");
     }
 
-    public void proceedToPaymentWithoutOpeningItemPage(String itemName) {
+    public void proceedToPaymentWithoutOpeningItemDetailPage(String itemName) {
         $x(format(ITEM, itemName)).shouldBe(Condition.visible).hover();
         $x(format(ITEM + ADD_TO_CART_ITEM, itemName)).shouldBe(Condition.visible).click();
         proceedPayment();

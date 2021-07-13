@@ -7,4 +7,7 @@ public interface PageFactory {
     MenuBar menuBar = new MenuBar();
     CatalogPage catalogPage = new CatalogPage();
     PaymentPage paymentPage = new PaymentPage();
+    UserPage userPage = new UserPage();
+    WishlistPage wishlistPage = new WishlistPage();
+    ItemDetailPage itemDetailPage = new ItemDetailPage();
 }

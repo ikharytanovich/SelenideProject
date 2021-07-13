@@ -17,6 +17,7 @@ public class MenuBar extends BasePage {
     private static final String PROCEED_FROM_CART_MENU = "//a[@id='button_order_cart']/span";
     private static final String REMOVE_BUTTON_CART_MENU = "//a[@class='ajax_cart_block_remove_link']";
     private static final String CART_ITEM_AMOUNT = "//a/span[@class='ajax_cart_quantity']";
+    private static final String USER_PAGE = "//a[@class='account']";
 
     public void breadCrumbGetHome() {
         $x(BREAD_CRUMB_HOME).shouldBe(Condition.visible).click();
@@ -57,11 +58,15 @@ public class MenuBar extends BasePage {
     }
 
     public void searchFor(String itemToSearch) {
-        $x(SEARCH_FIELD).shouldBe(Condition.visible).setValue(itemToSearch).submit();
+        $x(SEARCH_FIELD).shouldBe(Condition.visible).setValue(itemToSearch).pressEnter();
         log().info("SEARCH FOR: " + itemToSearch);
     }
 
     public void openCartPage() {
         $x(SHOPPING_CART_MENU).shouldBe(Condition.visible).click();
+    }
+
+    public void goToUserPage() {
+        $x(USER_PAGE).shouldBe(Condition.visible).click();
     }
 }

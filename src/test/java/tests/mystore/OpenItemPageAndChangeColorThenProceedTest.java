@@ -13,10 +13,10 @@ public class OpenItemPageAndChangeColorThenProceedTest extends BaseTest {
     @Description(value = "open item page and change color then proceed")
     public void openItemPageAndChangeColorThenProceed(String item) {
         menuBar.searchFor(item);
-        catalogPage.openItemPage(item);
-        catalogPage.changeItemColorToLast();
-        catalogPage.addToCart();
-        catalogPage.proceedPayment();
+        catalogPage.openItemDetailed(item);
+        itemDetailPage.changeItemColorToLast();
+        itemDetailPage.addToCart();
+        itemDetailPage.proceedPayment();
         paymentPage.proceedPaymentWithCheque();
         menuBar.breadCrumbGetHome();
     }

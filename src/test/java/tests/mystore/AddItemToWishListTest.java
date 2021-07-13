@@ -1,30 +1,28 @@
 package tests.mystore;
 
 import io.qameta.allure.Description;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
+import static org.testng.AssertJUnit.assertEquals;
 import static pages.PageFactory.*;
 
-public class CartMenuTest extends BaseTest {
+public class AddItemToWishListTest extends BaseTest {
+
     @Test(dataProvider = "DataProviderForCatalog")
-    @Description(value = "add items co cart, then check that amounts same")
-    public void checkThatCartHaveRightItemsAmount(String... items) {
+    @Description(value = "open item page and change color then proceed")
+    public void openItemPageAndChangeColorThenProceed(String... items) {
         for (String item : items) {
             menuBar.searchFor(item);
             catalogPage.openItemDetailed(item);
-            itemDetailPage.addToCart();
-            itemDetailPage.continueShopping();
+            itemDetailPage.addToWishlist();
         }
-        Assert.assertEquals(menuBar.getAmountOfItemsInCartMenu(), items.length);
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        menuBar.clearCartMenu();
+        menuBar.goToUserPage();
+        userPage.openWishListPage();
+        wishlistPage.openWishList();
+        assertEquals(wishlistPage.getWishListItemsAmount(), items.length);
+        wishlistPage.deleteItems();
     }
 
     @DataProvider(name = "DataProviderForCatalog")

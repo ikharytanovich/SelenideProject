@@ -13,18 +13,16 @@ public class AddItemAndProceedWithoutOpeningTest extends BaseTest {
     @Description(value = "add item and make order without opening item page with cheque payment")
     public void addItemAndProceedWithoutOpeningWithCheque(String item) {
         menuBar.searchFor(item);
-        catalogPage.proceedToPaymentWithoutOpeningItemPage(item);
+        catalogPage.proceedToPaymentWithoutOpeningItemDetailPage(item);
         paymentPage.proceedPaymentWithCheque();
-        menuBar.breadCrumbGetHome();
     }
 
     @Test(dataProvider = "DataProviderForCatalog")
     @Description(value = "add item and make order without opening item page with card payment")
     public void addItemAndProceedWithoutOpeningWithCard(String item) {
         menuBar.searchFor(item);
-        catalogPage.proceedToPaymentWithoutOpeningItemPage(item);
+        catalogPage.proceedToPaymentWithoutOpeningItemDetailPage(item);
         paymentPage.proceedPaymentWithCard();
-        menuBar.breadCrumbGetHome();
     }
 
     @DataProvider(name = "DataProviderForCatalog")

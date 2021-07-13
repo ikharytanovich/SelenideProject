@@ -15,6 +15,7 @@ public class PaymentPage extends BasePage {
     private static final String CHEQUE_PAYMENT = "//a[@class='cheque']";
     private static final String CARD_PAYMENT = "//a[@class='bankwire']";
     private static final String CONFIRM_ORDER = "//button[@class='button btn btn-default button-medium']";
+    private static final String ITEMS_IN_PAYMENT = "//a[@class='cart_quantity_delete']";
 
     public void proceedPaymentWithCheque() {
         proceedToCheckOut();
@@ -70,6 +71,6 @@ public class PaymentPage extends BasePage {
     }
 
     public void deleteItemsFromPaymentPage() {
-        $$x("//a[@class='cart_quantity_delete']").forEach(SelenideElement::click);
+        $$x(ITEMS_IN_PAYMENT).forEach(SelenideElement::click);
     }
 }
