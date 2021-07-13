@@ -18,7 +18,6 @@ public class OpenItemPageAndChangeColorThenProceedTest extends BaseTest {
         itemDetailPage.addToCart();
         itemDetailPage.proceedPayment();
         paymentPage.proceedPaymentWithCheque();
-        menuBar.breadCrumbGetHome();
     }
 
     @DataProvider(name = "DataProviderForCatalog")

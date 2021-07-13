@@ -2,7 +2,6 @@ package tests.mystore;
 
 import io.qameta.allure.Description;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tests.BaseTest;
@@ -20,10 +19,6 @@ public class CartMenuTest extends BaseTest {
             itemDetailPage.continueShopping();
         }
         Assert.assertEquals(menuBar.getAmountOfItemsInCartMenu(), items.length);
-    }
-
-    @AfterMethod
-    public void tearDown() {
         menuBar.clearCartMenu();
     }
 

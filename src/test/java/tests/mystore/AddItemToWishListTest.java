@@ -11,8 +11,8 @@ import static pages.PageFactory.*;
 public class AddItemToWishListTest extends BaseTest {
 
     @Test(dataProvider = "DataProviderForCatalog")
-    @Description(value = "open item page and change color then proceed")
-    public void openItemPageAndChangeColorThenProceed(String... items) {
+    @Description(value = "open item page and add items to wishlist, after clean list")
+    public void addItemsToWishlistAndCleanListAfter(String... items) {
         for (String item : items) {
             menuBar.searchFor(item);
             catalogPage.openItemDetailed(item);
