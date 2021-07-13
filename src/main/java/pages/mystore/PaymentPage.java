@@ -1,8 +1,10 @@
 package pages.mystore;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import pages.BasePage;
 
+import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class PaymentPage extends BasePage {
@@ -65,5 +67,9 @@ public class PaymentPage extends BasePage {
     public void confirmOrder() {
         $x(CONFIRM_ORDER).shouldBe(Condition.visible).click();
         log().info("ODER CONFIRM");
+    }
+
+    public void deleteItemsFromPaymentPage() {
+        $$x("//a[@class='cart_quantity_delete']").forEach(SelenideElement::click);
     }
 }

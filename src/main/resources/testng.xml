@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="My Store Suite" parallel="tests" thread-count="4">
-    <test name="addItemAndProceed">
+    <test name="AddItemAndProceedWithoutOpeningTest">
         <classes>
-            <class name="tests.mystore.AddItemAndProceedWithoutOpening"/>
+            <class name="tests.mystore.AddItemAndProceedWithoutOpeningTest"/>
         </classes>
     </test>
-    <test name="addItemChangeColorAndBuy">
+    <test name="OpenItemPageAndChangeColorThenProceedTest">
         <classes>
-            <class name="tests.mystore.OpenItemPageAndChangeColor"/>
+            <class name="tests.mystore.OpenItemPageAndChangeColorThenProceedTest"/>
+        </classes>
+    </test>
+    <test name="CartMenuTest">
+        <classes>
+            <class name="tests.mystore.CartMenuTest"/>
+        </classes>
+    </test>
+    <test name="CartPageTest">
+        <classes>
+            <class name="tests.mystore.CartPageTest"/>
         </classes>
     </test>
 </suite>

@@ -7,7 +7,7 @@ import tests.BaseTest;
 
 import static pages.PageFactory.*;
 
-public class AddItemAndProceedWithoutOpening extends BaseTest {
+public class AddItemAndProceedWithoutOpeningTest extends BaseTest {
 
     @Test(dataProvider = "DataProviderForCatalog")
     @Description(value = "add item and make order without opening item page with cheque payment")
@@ -15,6 +15,7 @@ public class AddItemAndProceedWithoutOpening extends BaseTest {
         menuBar.searchFor(item);
         catalogPage.proceedToPaymentWithoutOpeningItemPage(item);
         paymentPage.proceedPaymentWithCheque();
+        menuBar.breadCrumbGetHome();
     }
 
     @Test(dataProvider = "DataProviderForCatalog")
@@ -23,6 +24,7 @@ public class AddItemAndProceedWithoutOpening extends BaseTest {
         menuBar.searchFor(item);
         catalogPage.proceedToPaymentWithoutOpeningItemPage(item);
         paymentPage.proceedPaymentWithCard();
+        menuBar.breadCrumbGetHome();
     }
 
     @DataProvider(name = "DataProviderForCatalog")

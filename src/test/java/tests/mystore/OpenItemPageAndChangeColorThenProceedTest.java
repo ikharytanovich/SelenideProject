@@ -7,17 +7,18 @@ import tests.BaseTest;
 
 import static pages.PageFactory.*;
 
-public class OpenItemPageAndChangeColor extends BaseTest {
+public class OpenItemPageAndChangeColorThenProceedTest extends BaseTest {
 
     @Test(dataProvider = "DataProviderForCatalog")
-    @Description(value = "open item page and change color")
-    public void openItemPageAndChangeColor(String item) {
+    @Description(value = "open item page and change color then proceed")
+    public void openItemPageAndChangeColorThenProceed(String item) {
         menuBar.searchFor(item);
         catalogPage.openItemPage(item);
         catalogPage.changeItemColorToLast();
         catalogPage.addToCart();
         catalogPage.proceedPayment();
         paymentPage.proceedPaymentWithCheque();
+        menuBar.breadCrumbGetHome();
     }
 
     @DataProvider(name = "DataProviderForCatalog")
