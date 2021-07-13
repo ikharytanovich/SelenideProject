@@ -7,14 +7,22 @@ import tests.BaseTest;
 
 import static pages.PageFactory.*;
 
-public class LoginAndOrderTest extends BaseTest {
+public class AddItemAndProceedWithoutOpening extends BaseTest {
 
     @Test(dataProvider = "DataProviderForCatalog")
     @Description(value = "add item and make order without opening item page with cheque payment")
-    public void AddItemProceedPaymentWithCheque(String item) {
+    public void addItemAndProceedWithoutOpeningWithCheque(String item) {
         menuBar.searchFor(item);
-        catalogPage.addItemToCartAndProceedPayment(item);
+        catalogPage.proceedToPaymentWithoutOpeningItemPage(item);
         paymentPage.proceedPaymentWithCheque();
+    }
+
+    @Test(dataProvider = "DataProviderForCatalog")
+    @Description(value = "add item and make order without opening item page with card payment")
+    public void addItemAndProceedWithoutOpeningWithCard(String item) {
+        menuBar.searchFor(item);
+        catalogPage.proceedToPaymentWithoutOpeningItemPage(item);
+        paymentPage.proceedPaymentWithCard();
     }
 
     @DataProvider(name = "DataProviderForCatalog")

@@ -1,9 +1,8 @@
 package tests;
 
+import com.codeborne.selenide.WebDriverRunner;
 import config.DriverConfig;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.*;
 import pages.BasePage;
 import utils.listenerutils.TestListener;
 
@@ -23,7 +22,8 @@ public abstract class BaseTest {
     }
 
     @AfterTest
-    public void afterClass() {
+    public void afterTest() {
         menuBar.signOut();
+        WebDriverRunner.closeWebDriver();
     }
 }
