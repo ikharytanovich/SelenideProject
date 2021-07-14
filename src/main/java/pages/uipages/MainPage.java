@@ -15,6 +15,7 @@ public class MainPage extends BasePage {
     public static final String CLICK_LINK = "//a[text()='Click']";
     public static final String TEXT_INPUT_LINK = "//a[text()='Text Input']";
     public static final String SCROLLBARS_LINK = "//a[text()='Scrollbars']";
+    public static final String DYNAMIC_TABLE_LINK = "//a[text()='Dynamic Table']";
     public static final String LINK = "//a[text()='Dynamic ID']";
 
     public void goToPageByLink(String locator) {

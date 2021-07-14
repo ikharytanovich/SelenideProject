@@ -1,8 +1,8 @@
 package pages.uipages;
 
-import com.codeborne.selenide.Condition;
 import pages.BasePage;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class HiddenLayers extends BasePage {
@@ -10,8 +10,8 @@ public class HiddenLayers extends BasePage {
     public static final String BLUE_BUTTON = "//button[@id='blueButton']";
 
     public boolean isGreenButtonHiddenUnderBlueButton() {
-        $x(GREEN_BUTTON).shouldBe(Condition.visible).click();
+        $x(GREEN_BUTTON).shouldBe(visible).click();
         log().info("CLICK ON GREEN BUTTON");
-        return $x(GREEN_BUTTON).is(Condition.visible);
+        return $x(GREEN_BUTTON).is(visible);
     }
 }

@@ -5,6 +5,7 @@ import pages.BasePage;
 
 import java.time.Duration;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class AJAXDataPage extends BasePage {
@@ -14,6 +15,7 @@ public class AJAXDataPage extends BasePage {
 
     public boolean clickOnButton() {
         $x(BUTTON).shouldBe(Condition.visible).click();
-        return $x(RESULT_FIELD).shouldBe(Condition.visible, Duration.ofSeconds(CUSTOM_WAIT_TIME)).is(Condition.visible);
+        log().info("CLICK ON BUTTON AND WAIT FOR RESULT");
+        return $x(RESULT_FIELD).shouldBe(visible, Duration.ofSeconds(CUSTOM_WAIT_TIME)).is(visible);
     }
 }

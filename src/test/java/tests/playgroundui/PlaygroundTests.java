@@ -3,7 +3,7 @@ package tests.playgroundui;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static constants.TestsConstants.INPUT_TEXT;
+import static constants.TestsConstants.*;
 import static org.testng.Assert.assertTrue;
 import static pages.PageFactory.*;
 import static pages.uipages.MainPage.*;
@@ -62,5 +62,11 @@ public class PlaygroundTests extends BaseTest {
     public void ScrollbarsTest(){
         mainPage.goToPageByLink(SCROLLBARS_LINK);
         assertTrue(scrollbarsPage.clickOnButtonInContainer());
+    }
+
+    @Test
+    public void DynamicTableTest(){
+        mainPage.goToPageByLink(DYNAMIC_TABLE_LINK);
+        assertTrue(dynamicTablePage.compareValueInYellowLabel(DYNAMIC_TABLE_HEADER_NAME,DYNAMIC_TABLE_ROW_NAME));
     }
 }

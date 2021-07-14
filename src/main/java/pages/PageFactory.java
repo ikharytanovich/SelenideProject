@@ -13,4 +13,5 @@ public interface PageFactory {
     ClickPage clickPage = new ClickPage();
     TextInputPage textInputPage = new TextInputPage();
     ScrollbarsPage scrollbarsPage = new ScrollbarsPage();
+    DynamicTablePage dynamicTablePage = new DynamicTablePage();
 }
