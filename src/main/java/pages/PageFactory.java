@@ -1,13 +1,16 @@
 package pages;
 
-import pages.mystore.*;
+import pages.uipages.*;
 
 public interface PageFactory {
-    LogInPage logInPage = new LogInPage();
-    MenuBar menuBar = new MenuBar();
-    CatalogPage catalogPage = new CatalogPage();
-    PaymentPage paymentPage = new PaymentPage();
-    UserPage userPage = new UserPage();
-    WishlistPage wishlistPage = new WishlistPage();
-    ItemDetailPage itemDetailPage = new ItemDetailPage();
+    MainPage mainPage = new MainPage();
+    DynamicIdPage dynamicIdPage = new DynamicIdPage();
+    ClassAttributePage classAttributePage = new ClassAttributePage();
+    HiddenLayers hiddenLayers = new HiddenLayers();
+    LoadDelayPage loadDelayPage = new LoadDelayPage();
+    AJAXDataPage ajaxDataPage = new AJAXDataPage();
+    ClientSideDelayPage clientSideDelayPage = new ClientSideDelayPage();
+    ClickPage clickPage = new ClickPage();
+    TextInputPage textInputPage = new TextInputPage();
+    ScrollbarsPage scrollbarsPage = new ScrollbarsPage();
 }

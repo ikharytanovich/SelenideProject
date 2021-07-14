@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="My Store Suite" parallel="tests" thread-count="4">
-    <test name="AddItemAndProceedWithoutOpeningTest">
+<suite name="Selenide Practice Suite" parallel="methods" thread-count="4">
+    <test name="Playground Test">
         <classes>
-            <class name="tests.mystore.AddItemAndProceedWithoutOpeningTest"/>
-        </classes>
-    </test>
-    <test name="OpenItemPageAndChangeColorThenProceedTest">
-        <classes>
-            <class name="tests.mystore.OpenItemPageAndChangeColorThenProceedTest"/>
-        </classes>
-    </test>
-    <test name="CartMenuTest">
-        <classes>
-            <class name="tests.mystore.CartMenuTest"/>
-        </classes>
-    </test>
-    <test name="CartPageTest">
-        <classes>
-            <class name="tests.mystore.CartPageTest"/>
-        </classes>
-    </test>
-    <test name="AddItemToWishListTest">
-        <classes>
-            <class name="tests.mystore.AddItemToWishListTest"/>
+            <class name="tests.playgroundui.PlaygroundTests"/>
         </classes>
     </test>
 </suite>
