@@ -12,8 +12,11 @@ public class SampleAppPage extends BasePage {
 
     public boolean isLoggedIn(String username, String password) {
         $x(USER_NAME_FIELD).shouldBe(visible).setValue(username);
+        log().info("INPUT USERNAME");
         $x(PASSWORD_FIELD).shouldBe(visible).setValue(password);
+        log().info("INPUT PASSWORD");
         $x(BUTTON).shouldBe(visible).click();
+        log().info("CLICK ON LOGIN");
         return $x(BUTTON).shouldBe(visible).getText().equals("Log Out");
     }
 }

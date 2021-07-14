@@ -13,13 +13,13 @@ public class PlaygroundTests extends BaseTest {
     @Test(description = "locate button and click on it without using id")
     public void dynamicIdTest() {
         mainPage.goToPageByLink(DYNAMIC_ID_LINK);
-        assertTrue(dynamicIdPage.clickOnButton());
+        assertTrue(dynamicIdPage.isClickedOnButton());
     }
 
-    @Test(description = "find button and click on it with xpath")
+    @Test(description = "locate button and click on it with xpath")
     public void classAttributeTest() {
         mainPage.goToPageByLink(CLASS_ATTRIBUTE_LINK);
-        assertTrue(classAttributePage.clickObBlueButton());
+        assertTrue(classAttributePage.isClickedOnBlueButton());
     }
 
     @Test(description = "find green button and click on it, then check is green button covered by blue")
@@ -28,31 +28,31 @@ public class PlaygroundTests extends BaseTest {
         assertTrue(hiddenLayers.isGreenButtonHiddenUnderBlueButton());
     }
 
-    @Test
+    @Test(description = "find button after load and click")
     public void loadDelayTest() {
         mainPage.goToPageByLink(LOAD_DELAY_LINK);
-        assertTrue(loadDelayPage.clickOnButtonAfterLoad());
+        assertTrue(loadDelayPage.isClickedOnButtonAfterLoad());
     }
 
-    @Test
+    @Test(description = "after click on button wait for loading")
     public void aJAXDataTest() {
         mainPage.goToPageByLink(AJAX_DATA_LINK);
-        assertTrue(ajaxDataPage.clickOnButton());
+        assertTrue(ajaxDataPage.isClickedOnButton());
     }
 
-    @Test
+    @Test(description = "find button after load and click")
     public void clientSideDelayPage() {
         mainPage.goToPageByLink(CLIENT_SITE_DELAY_LINK);
-        assertTrue(clientSideDelayPage.clickOnButton());
+        assertTrue(clientSideDelayPage.isClickedOnButton());
     }
 
-    @Test
+    @Test(description = "click on page two times")
     public void clickPageTest() {
         mainPage.goToPageByLink(CLICK_LINK);
-        assertTrue(clickPage.clickTwoTimes());
+        assertTrue(clickPage.isClickedTwoTimes());
     }
 
-    @Test
+    @Test(description = "input text and check value on button")
     public void textInputTest() {
         mainPage.goToPageByLink(TEXT_INPUT_LINK);
         assertTrue(textInputPage.isInputtedTextInButton(INPUT_TEXT));

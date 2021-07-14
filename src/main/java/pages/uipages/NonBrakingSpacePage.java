@@ -10,6 +10,7 @@ public class NonBrakingSpacePage extends BasePage {
 
     public boolean isButtonClicked() {
         $x(BUTTON).shouldBe(Condition.visible).click();
+        log().info("CLICK ON BUTTON");
         return true;
     }
 }

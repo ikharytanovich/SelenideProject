@@ -12,7 +12,7 @@ public class ClientSideDelayPage extends BasePage {
     private static final String RESULT_FIELD = "//p[@class='bg-success']";
     private static final long CUSTOM_WAIT_TIME = 25;
 
-    public boolean clickOnButton() {
+    public boolean isClickedOnButton() {
         $x(BUTTON).shouldBe(visible).click();
         log().info("CLICK ON BUTTON AND WAIT FOR RESULT");
         return $x(RESULT_FIELD).shouldBe(visible, Duration.ofSeconds(CUSTOM_WAIT_TIME)).is(visible);

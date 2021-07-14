@@ -19,9 +19,13 @@ public class DynamicTablePage extends BasePage {
 
     public boolean compareValueInYellowLabel(String headerName, String rowName) {
         List<SelenideElement> headers = $$x(HEADERS);
+        log().info("GET HEADERS FROM TABLE");
         int columnId = DYNAMIC_TABLE_UTILS.getHeaderId(headers, headerName);
+        log().info(format("GET HEADER ID OF COLUMN %s", headerName));
         SelenideElement searchedElement = DYNAMIC_TABLE_UTILS.getElementFromTableByRowNameAndColumnId(rowName, columnId);
+        log().info(format("GET ELEMENT BY ROWNAME %s", rowName));
         SelenideElement elementWithExpectedValue = $x(EXPECTED_VALUE);
+        log().info("GET EXPECTED ELEMENT AND COMPARE WITH ACTUAL");
         return getPureResultFromElement(elementWithExpectedValue, headerName).equals(searchedElement.getText());
     }
 

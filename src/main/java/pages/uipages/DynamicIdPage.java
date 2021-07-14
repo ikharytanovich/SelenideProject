@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class DynamicIdPage extends BasePage {
     private static final String BUTTON = "//button[@class='btn btn-primary']";
 
-    public boolean clickOnButton() {
+    public boolean isClickedOnButton() {
         $x(BUTTON).shouldBe(visible).click();
         log().info("PRESSED ON BUTTON");
         return true;
