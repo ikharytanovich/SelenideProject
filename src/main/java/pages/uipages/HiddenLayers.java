@@ -12,6 +12,6 @@ public class HiddenLayers extends BasePage {
     public boolean isGreenButtonHiddenUnderBlueButton() {
         $x(GREEN_BUTTON).shouldBe(visible).click();
         log().info("CLICK ON GREEN BUTTON");
-        return $x(GREEN_BUTTON).is(visible);
+        return $x(BLUE_BUTTON).is(visible);
     }
 }

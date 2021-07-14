@@ -14,4 +14,9 @@ public interface PageFactory {
     TextInputPage textInputPage = new TextInputPage();
     ScrollbarsPage scrollbarsPage = new ScrollbarsPage();
     DynamicTablePage dynamicTablePage = new DynamicTablePage();
+    VerifyTextPage verifyText = new VerifyTextPage();
+    ProgressBarPage progressBarPage = new ProgressBarPage();
+    MouseOverPage mouseOverPage = new MouseOverPage();
+    SampleAppPage sampleAppPage = new SampleAppPage();
+    NonBrakingSpacePage nonBrakingSpacePage = new NonBrakingSpacePage();
 }
