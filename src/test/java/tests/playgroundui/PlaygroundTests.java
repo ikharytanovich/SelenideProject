@@ -58,10 +58,10 @@ public class PlaygroundTests extends BaseTest {
         assertTrue(textInputPage.isInputtedTextInButton(INPUT_TEXT));
     }
 
-    @Test
+    @Test(description = "scroll to bar and click")
     public void scrollbarsTest() {
         mainPage.goToPageByLink(SCROLLBARS_LINK);
-        assertTrue(scrollbarsPage.clickOnButtonInContainer());
+        assertTrue(scrollbarsPage.isClickedOnButtonInContainer());
     }
 
     @Test
