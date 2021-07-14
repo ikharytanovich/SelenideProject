@@ -76,7 +76,7 @@ public class PlaygroundTests extends BaseTest {
         assertTrue(verifyText.isTextCorrect());
     }
 
-    @Test
+    @Test(description = "click on start button and when progress bar get to N percent click on stop")
     public void progressBarTest() {
         mainPage.goToPageByLink(PROGRESS_BAR_LINK);
         assertTrue(progressBarPage.isCorrectlyStoppedInNPercent(PROGRESS_BAR_VALUE));
