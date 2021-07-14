@@ -17,7 +17,7 @@ public class DynamicTablePage extends BasePage {
     private static final String HEADERS = "//span[@role='columnheader']";
     private static final String EXPECTED_VALUE = "//p[@class='bg-warning']";
 
-    public boolean compareValueInYellowLabel(String headerName, String rowName) {
+    public boolean isSameWithValueInYellowLabel(String headerName, String rowName) {
         List<SelenideElement> headers = $$x(HEADERS);
         log().info("GET HEADERS FROM TABLE");
         int columnId = DYNAMIC_TABLE_UTILS.getHeaderId(headers, headerName);

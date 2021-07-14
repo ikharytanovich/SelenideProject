@@ -64,13 +64,13 @@ public class PlaygroundTests extends BaseTest {
         assertTrue(scrollbarsPage.isClickedOnButtonInContainer());
     }
 
-    @Test
+    @Test(description = "find in table value and compare to result box")
     public void dynamicTableTest() {
         mainPage.goToPageByLink(DYNAMIC_TABLE_LINK);
-        assertTrue(dynamicTablePage.compareValueInYellowLabel(DYNAMIC_TABLE_HEADER_NAME, DYNAMIC_TABLE_ROW_NAME));
+        assertTrue(dynamicTablePage.isSameWithValueInYellowLabel(DYNAMIC_TABLE_HEADER_NAME, DYNAMIC_TABLE_ROW_NAME));
     }
 
-    @Test
+    @Test(description = "find and verify with text in box")
     public void verifyTextTest() {
         mainPage.goToPageByLink(VERIFY_TEXT_LINK);
         assertTrue(verifyText.isTextCorrect());
