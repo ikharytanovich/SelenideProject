@@ -12,7 +12,7 @@ public class DriverConfig {
     }
 
     public static void configuration() {
-        System.setProperty(DRIVER_NAME, DRIVER_PATH);
+        System.setProperty(DRIVER_NAME.getSrc(), DRIVER_PATH.getSrc());
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadTimeout = 15000;
         Configuration.timeout = 10000;
