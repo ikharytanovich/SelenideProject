@@ -82,19 +82,19 @@ public class PlaygroundTests extends BaseTest {
         assertTrue(progressBarPage.isCorrectlyStoppedInNPercent(PROGRESS_BAR_VALUE));
     }
 
-    @Test
+    @Test(description = "input login and password in fields and login in")
     public void sampleAppTest() {
         mainPage.goToPageByLink(SAMPLE_APP_PAGE);
         sampleAppPage.isLoggedIn(USER_CONST, PASSWORD_CONST);
     }
 
-    @Test
+    @Test(description = "click on link N times and then compare results")
     public void mouseOverTest() {
         mainPage.goToPageByLink(MOUSE_OVER_LINK);
         assertTrue(mouseOverPage.isClickedRightTimes(TIMES_TO_CLICK));
     }
 
-    @Test
+    @Test(description = "find element that contains non-braking space and click on it")
     public void nonBreakingSpaceTest() {
         mainPage.goToPageByLink(NON_BRAKING_SPACE_LINK);
         assertTrue(nonBrakingSpacePage.isButtonClicked());
