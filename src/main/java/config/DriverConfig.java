@@ -3,9 +3,13 @@ package config;
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import static constants.ConfigConstants.DRIVER_NAME;
+import static constants.ConfigConstants.DRIVER_PATH;
+
 public class DriverConfig {
-    private static final String DRIVER_NAME = "webdriver.chrome.driver";
-    private static final String DRIVER_PATH = "src/main/resources/chromedriver.exe";
+
+    private DriverConfig() {
+    }
 
     public static void configuration() {
         System.setProperty(DRIVER_NAME, DRIVER_PATH);
