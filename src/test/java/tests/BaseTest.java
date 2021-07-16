@@ -2,9 +2,9 @@ package tests;
 
 import com.codeborne.selenide.WebDriverRunner;
 import config.DriverConfig;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import pages.BasePage;
 import utils.listenerutils.TestListener;
@@ -16,13 +16,13 @@ public abstract class BaseTest {
         DriverConfig.configuration();
     }
 
-    @BeforeMethod
-    public void beforeMethod() {
+    @BeforeTest
+    public void beforeTest() {
         BasePage.openMainPage();
     }
 
-    @AfterMethod
-    public void afterMethod() {
+    @AfterTest
+    public void afterTest() {
         WebDriverRunner.closeWebDriver();
     }
 }

@@ -1,9 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Selenide Practice Suite" parallel="methods" thread-count="4">
-    <test name="Playground Test">
+<suite name="Selenide Practice on PlaygroundUi Suite" parallel="tests" thread-count="4">
+    <test name="AJAXData Test">
         <classes>
-            <class name="tests.playgroundtests.PlaygroundTests"/>
+            <class name="tests.playgroundtests.AJAXDataTest"/>
+        </classes>
+    </test>
+    <test name="ClassAttribute Test">
+        <classes>
+            <class name="tests.playgroundtests.ClassAttributeTest"/>
+        </classes>
+    </test>
+    <test name="ClickPage Test">
+        <classes>
+            <class name="tests.playgroundtests.ClickPageTest"/>
+        </classes>
+    </test>
+    <test name="ClientSideDelay Test">
+        <classes>
+            <class name="tests.playgroundtests.ClientSideDelayTest"/>
+        </classes>
+    </test>
+    <test name="DynamicId Test">
+        <classes>
+            <class name="tests.playgroundtests.DynamicIdTest"/>
+        </classes>
+    </test>
+    <test name="DynamicTable Test">
+        <classes>
+            <class name="tests.playgroundtests.DynamicTableTest"/>
+        </classes>
+    </test>
+    <test name="HiddenLayers Test">
+        <classes>
+            <class name="tests.playgroundtests.HiddenLayersTest"/>
+        </classes>
+    </test>
+    <test name="LoadDelay Test">
+        <classes>
+            <class name="tests.playgroundtests.LoadDelayTest"/>
+        </classes>
+    </test>
+    <test name="MouseOver Test">
+        <classes>
+            <class name="tests.playgroundtests.MouseOverTest"/>
+        </classes>
+    </test>
+    <test name="NonBrakingSpace Test">
+        <classes>
+            <class name="tests.playgroundtests.NonBrakingSpaceTest"/>
+        </classes>
+    </test>
+    <test name="ProgressBar Test">
+        <classes>
+            <class name="tests.playgroundtests.ProgressBarTest"/>
+        </classes>
+    </test>
+    <test name="SampleApp Test">
+        <classes>
+            <class name="tests.playgroundtests.SampleAppTest"/>
+        </classes>
+    </test>
+    <test name="Scrollbars Test">
+        <classes>
+            <class name="tests.playgroundtests.ScrollbarsTest"/>
+        </classes>
+    </test>
+    <test name="TextInput Test">
+        <classes>
+            <class name="tests.playgroundtests.TextInputTest"/>
+        </classes>
+    </test>
+    <test name="VerifyText Test">
+        <classes>
+            <class name="tests.playgroundtests.VerifyTextTest"/>
         </classes>
     </test>
 </suite>
