@@ -6,10 +6,10 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ScrollbarsPage extends BasePage {
-    private static final String BUTTON = "//button[@id='hidingButton']";
+    private final String button = "//button[@id='hidingButton']";
 
     public boolean isClickedOnButtonInContainer() {
-        $x(BUTTON).shouldBe(visible).scrollTo().click();
+        $x(button).shouldBe(visible).scrollTo().click();
         log().info("SCROLL TO ELEMENT AND CLICK");
         return true;
     }

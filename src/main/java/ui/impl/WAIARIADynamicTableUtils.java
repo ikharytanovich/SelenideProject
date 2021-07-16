@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$x;
 import static java.lang.String.format;
 
 public class WAIARIADynamicTableUtils implements TableUtils {
-    private static final String SEARCHED_ELEMENT_LOCATOR_WITH = "//span[@role='cell'][text()='%s']//following-sibling::span[%s]";
+    private final String searchedElementLocatorWith = "//span[@role='cell'][text()='%s']//following-sibling::span[%s]";
 
     @Override
     public int getHeaderId(List<SelenideElement> headers, String headerName) {
@@ -26,6 +26,6 @@ public class WAIARIADynamicTableUtils implements TableUtils {
 
     @Override
     public SelenideElement getElementFromTableByRowNameAndColumnId(String name, int id) {
-        return $x(format(SEARCHED_ELEMENT_LOCATOR_WITH, name, id));
+        return $x(format(searchedElementLocatorWith, name, id));
     }
 }

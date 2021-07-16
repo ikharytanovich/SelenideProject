@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @AllArgsConstructor
-public enum TestsStringConstants {
+public enum TestsStringsConstants {
     USER_NAME("user name"),
     PASSWORD("pwd"),
     INPUT("INPUT111000111"),

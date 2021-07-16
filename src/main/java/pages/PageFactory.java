@@ -4,19 +4,19 @@ import pages.playgroundpages.*;
 
 public interface PageFactory {
     MainPage mainPage = new MainPage();
-    DynamicIdPage dynamicIdPage = new DynamicIdPage();
+    AJAXDataPage ajaxDataPage = new AJAXDataPage();
     ClassAttributePage classAttributePage = new ClassAttributePage();
+    ClickPage clickPage = new ClickPage();
+    ClientSideDelayPage clientSideDelayPage = new ClientSideDelayPage();
+    DynamicIdPage dynamicIdPage = new DynamicIdPage();
+    DynamicTablePage dynamicTablePage = new DynamicTablePage();
     HiddenLayers hiddenLayers = new HiddenLayers();
     LoadDelayPage loadDelayPage = new LoadDelayPage();
-    AJAXDataPage ajaxDataPage = new AJAXDataPage();
-    ClientSideDelayPage clientSideDelayPage = new ClientSideDelayPage();
-    ClickPage clickPage = new ClickPage();
-    TextInputPage textInputPage = new TextInputPage();
-    ScrollbarsPage scrollbarsPage = new ScrollbarsPage();
-    DynamicTablePage dynamicTablePage = new DynamicTablePage();
-    VerifyTextPage verifyText = new VerifyTextPage();
-    ProgressBarPage progressBarPage = new ProgressBarPage();
     MouseOverPage mouseOverPage = new MouseOverPage();
-    SampleAppPage sampleAppPage = new SampleAppPage();
     NonBrakingSpacePage nonBrakingSpacePage = new NonBrakingSpacePage();
+    ProgressBarPage progressBarPage = new ProgressBarPage();
+    SampleAppPage sampleAppPage = new SampleAppPage();
+    ScrollbarsPage scrollbarsPage = new ScrollbarsPage();
+    TextInputPage textInputPage = new TextInputPage();
+    VerifyTextPage verifyText = new VerifyTextPage();
 }

@@ -6,15 +6,15 @@ import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
+import static enums.TestsIntegersConstants.WAIT_25_SECONDS;
 
 public class ClientSideDelayPage extends BasePage {
-    private static final String BUTTON = "//button[@id='ajaxButton']";
-    private static final String RESULT_FIELD = "//p[@class='bg-success']";
-    private static final long CUSTOM_WAIT_TIME = 25;
+    private final String button = "//button[@id='ajaxButton']";
+    private final String resultField = "//p[@class='bg-success']";
 
     public boolean isClickedOnButton() {
-        $x(BUTTON).shouldBe(visible).click();
+        $x(button).shouldBe(visible).click();
         log().info("CLICK ON BUTTON AND WAIT FOR RESULT");
-        return $x(RESULT_FIELD).shouldBe(visible, Duration.ofSeconds(CUSTOM_WAIT_TIME)).is(visible);
+        return $x(resultField).shouldBe(visible, Duration.ofSeconds(WAIT_25_SECONDS.getValue())).is(visible);
     }
 }

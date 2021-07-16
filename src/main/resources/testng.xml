@@ -3,7 +3,7 @@
 <suite name="Selenide Practice Suite" parallel="methods" thread-count="4">
     <test name="Playground Test">
         <classes>
-            <class name="tests.playgroundui.PlaygroundTests"/>
+            <class name="tests.playgroundtests.PlaygroundTests"/>
         </classes>
     </test>
 </suite>

@@ -1,12 +1,11 @@
-package tests.playgroundui;
+package tests.playgroundtests;
 
-import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static enums.TestIntegerConstants.PROGRESS_BAR_VALUE;
-import static enums.TestIntegerConstants.TIMES_TO_CLICK;
-import static enums.TestsStringConstants.*;
+import static enums.TestsIntegersConstants.PROGRESS_BAR_VALUE;
+import static enums.TestsIntegersConstants.TIMES_TO_CLICK;
+import static enums.TestsStringsConstants.*;
 import static org.testng.Assert.assertTrue;
 import static pages.PageFactory.*;
 import static pages.playgroundpages.MainPage.*;

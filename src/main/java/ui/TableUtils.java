@@ -1,7 +1,6 @@
 package ui;
 
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
