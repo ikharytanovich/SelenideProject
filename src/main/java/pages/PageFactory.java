@@ -1,6 +1,6 @@
 package pages;
 
-import pages.uipages.*;
+import pages.playgroundpages.*;
 
 public interface PageFactory {
     MainPage mainPage = new MainPage();

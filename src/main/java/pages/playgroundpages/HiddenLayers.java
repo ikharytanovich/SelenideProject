@@ -1,4 +1,4 @@
-package pages.uipages;
+package pages.playgroundpages;
 
 import pages.BasePage;
 

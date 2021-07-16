@@ -5,7 +5,7 @@ import org.testng.ITestResult;
 import utils.loggerutils.ILogger;
 
 import static java.lang.String.format;
-import static utils.ScreenshotTaker.takeScreenshot;
+import static utils.listenerutils.ScreenshotTaker.takeScreenshot;
 
 public class TestListener implements ITestListener, ILogger {
 

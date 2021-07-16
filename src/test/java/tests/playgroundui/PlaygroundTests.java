@@ -1,12 +1,15 @@
 package tests.playgroundui;
 
+import io.qameta.allure.Epic;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
-import static constants.TestsConstants.*;
+import static enums.TestIntegerConstants.PROGRESS_BAR_VALUE;
+import static enums.TestIntegerConstants.TIMES_TO_CLICK;
+import static enums.TestsStringConstants.*;
 import static org.testng.Assert.assertTrue;
 import static pages.PageFactory.*;
-import static pages.uipages.MainPage.*;
+import static pages.playgroundpages.MainPage.*;
 
 public class PlaygroundTests extends BaseTest {
 
@@ -55,7 +58,7 @@ public class PlaygroundTests extends BaseTest {
     @Test(description = "input text and check value on button")
     public void textInputTest() {
         mainPage.goToPageByLink(TEXT_INPUT_LINK);
-        assertTrue(textInputPage.isInputtedTextInButton(INPUT_TEXT));
+        assertTrue(textInputPage.isInputtedTextInButton(INPUT.getValue()));
     }
 
     @Test(description = "scroll to bar and click")
@@ -67,7 +70,7 @@ public class PlaygroundTests extends BaseTest {
     @Test(description = "find in table value and compare to result box")
     public void dynamicTableTest() {
         mainPage.goToPageByLink(DYNAMIC_TABLE_LINK);
-        assertTrue(dynamicTablePage.isSameWithValueInYellowLabel(DYNAMIC_TABLE_HEADER_NAME, DYNAMIC_TABLE_ROW_NAME));
+        assertTrue(dynamicTablePage.isSameWithValueInYellowLabel(DYNAMIC_TABLE_HEADER.getValue(), DYNAMIC_TABLE_ROW.getValue()));
     }
 
     @Test(description = "find and verify with text in box")
@@ -79,19 +82,19 @@ public class PlaygroundTests extends BaseTest {
     @Test(description = "click on start button and when progress bar get to N percent click on stop")
     public void progressBarTest() {
         mainPage.goToPageByLink(PROGRESS_BAR_LINK);
-        assertTrue(progressBarPage.isCorrectlyStoppedInNPercent(PROGRESS_BAR_VALUE));
+        assertTrue(progressBarPage.isCorrectlyStoppedInNPercent(PROGRESS_BAR_VALUE.getValue()));
     }
 
     @Test(description = "input login and password in fields and login in")
     public void sampleAppTest() {
         mainPage.goToPageByLink(SAMPLE_APP_PAGE);
-        sampleAppPage.isLoggedIn(USER_CONST, PASSWORD_CONST);
+        sampleAppPage.isLoggedIn(USER_NAME.getValue(), PASSWORD.getValue());
     }
 
     @Test(description = "click on link N times and then compare results")
     public void mouseOverTest() {
         mainPage.goToPageByLink(MOUSE_OVER_LINK);
-        assertTrue(mouseOverPage.isClickedRightTimes(TIMES_TO_CLICK));
+        assertTrue(mouseOverPage.isClickedRightTimes(TIMES_TO_CLICK.getValue()));
     }
 
     @Test(description = "find element that contains non-braking space and click on it")

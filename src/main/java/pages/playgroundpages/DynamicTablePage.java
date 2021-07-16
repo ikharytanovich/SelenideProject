@@ -1,4 +1,4 @@
-package pages.uipages;
+package pages.playgroundpages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.WebElement;

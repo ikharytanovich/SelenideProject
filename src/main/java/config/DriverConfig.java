@@ -3,8 +3,8 @@ package config;
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import static constants.ConfigConstants.DRIVER_NAME;
-import static constants.ConfigConstants.DRIVER_PATH;
+import static enums.ConfigConstants.DRIVER_NAME;
+import static enums.ConfigConstants.DRIVER_PATH;
 
 public class DriverConfig {
 
@@ -12,7 +12,7 @@ public class DriverConfig {
     }
 
     public static void configuration() {
-        System.setProperty(DRIVER_NAME.getSrc(), DRIVER_PATH.getSrc());
+        System.setProperty(DRIVER_NAME.getValue(), DRIVER_PATH.getValue());
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadTimeout = 15000;
         Configuration.timeout = 10000;

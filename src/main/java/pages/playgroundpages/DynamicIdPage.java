@@ -1,16 +1,16 @@
-package pages.uipages;
+package pages.playgroundpages;
 
 import pages.BasePage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class LoadDelayPage extends BasePage {
+public class DynamicIdPage extends BasePage {
     private static final String BUTTON = "//button[@class='btn btn-primary']";
 
-    public boolean isClickedOnButtonAfterLoad() {
+    public boolean isClickedOnButton() {
         $x(BUTTON).shouldBe(visible).click();
-        log().info("CLICK ON BUTTON AFTER LOAD");
+        log().info("PRESSED ON BUTTON");
         return true;
     }
 }

@@ -1,4 +1,4 @@
-package constants;
+package enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,5 +9,5 @@ public enum ConfigConstants {
     DRIVER_PATH("src/main/resources/chromedriver.exe");
 
     @Getter
-    private final String src;
+    private final String value;
 }
